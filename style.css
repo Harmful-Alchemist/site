@@ -1,3 +1,7 @@
+html {
+    width: 100%;
+}
+
 .starry-sky {
     background-color: black;
     background-image:
@@ -20,12 +24,26 @@
     color: transparent;
 }
 
-.sun:hover, .sun:active {
-    background-image: linear-gradient(yellow, red 50vh);
-    font-size: 110%;
-    color: black;
-    text-align: center;
+@media screen and (min-width: 601px) {
+    .sun:hover,
+    .sun:active {
+        background-image: linear-gradient(yellow, red 50vh);
+        color: black;
+        text-align: center;
+    }
 }
+
+@media screen and (max-width: 601px) {
+    .sun:hover,
+    .sun:active {
+        background-image: linear-gradient(yellow, red 50vh);
+        color: black;
+        text-align: center;
+        font-size: 50%;
+    }
+}
+
+
 
 .pad-p {
     padding-top: 25%;
