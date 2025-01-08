@@ -10,7 +10,6 @@ html {
         radial-gradient(white, rgba(255, 255, 255, .0) 2px),
         radial-gradient(white, rgba(255, 255, 255, .0) 1px);
     background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
 .sun {
@@ -25,6 +24,7 @@ html {
 }
 
 @media screen and (min-width: 601px) {
+
     .sun:hover,
     .sun:active {
         background-image: linear-gradient(yellow, red 50vh);
@@ -38,6 +38,7 @@ html {
 }
 
 @media screen and (max-width: 601px) {
+
     .sun:hover,
     .sun:active {
         background-image: linear-gradient(yellow, red 50vh);
@@ -63,6 +64,17 @@ html {
     position: absolute;
     top: 20vh;
     left: 15vw;
+}
+
+.blue-planet-moon {
+    background-color: beige;
+    background-image: radial-gradient(circle at 80% 80%, rgb(10, 10, 10, 0.4), beige 5vh);
+    border-radius: 50%;
+    height: 3vw;
+    width: 3vw;
+    position: absolute;
+    top: 40vh;
+    left: 14vw;
 }
 
 .red-planet {
