@@ -73,8 +73,22 @@ html {
     height: 3vw;
     width: 3vw;
     position: absolute;
-    top: 40vh;
-    left: 14vw;
+    /* top: 41vh;
+    left: 18.5vw; */
+    animation-duration: 3s;
+    animation-name: orbit-blue;
+    offset-path: circle(15vh at 20vw 30vh);
+}
+
+@keyframes orbit-blue {
+    0%,
+    20% {
+      offset-distance: 0%;
+    }
+    80%,
+    100% {
+      offset-distance: 100%;
+    }
 }
 
 .red-planet {
