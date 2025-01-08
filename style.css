@@ -18,7 +18,7 @@ html {
     border-radius: 50%;
     height: 20vw;
     width: 20vw;
-    position: relative;
+    position: absolute;
     top: 30vh;
     left: 40vw;
     color: transparent;
@@ -31,6 +31,10 @@ html {
         color: black;
         text-align: center;
     }
+
+    .pad-p {
+        padding-top: 25%;
+    }
 }
 
 @media screen and (max-width: 601px) {
@@ -39,11 +43,13 @@ html {
         background-image: linear-gradient(yellow, red 50vh);
         color: black;
         text-align: center;
-        font-size: 50%;
+        font-size: xx-small;
+    }
+
+    .pad-p {
+        padding-top: 15%;
     }
 }
-
-
 
 .pad-p {
     padding-top: 25%;
@@ -54,9 +60,9 @@ html {
     border-radius: 50%;
     height: 10vw;
     width: 10vw;
-    position: relative;
-    top: -10vh;
-    left: 20vw;
+    position: absolute;
+    top: 20vh;
+    left: 15vw;
 }
 
 .red-planet {
@@ -64,7 +70,7 @@ html {
     border-radius: 50%;
     height: 5vw;
     width: 5vw;
-    position: relative;
-    top: 10vh;
-    left: 80vw;
+    position: absolute;
+    top: 85vh;
+    left: 90vw;
 }
