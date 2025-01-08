@@ -1,0 +1,52 @@
+.starry-sky {
+    background-color: black;
+    background-image:
+        radial-gradient(white, rgba(255, 255, 255, .0) 2px),
+        radial-gradient(white, rgba(255, 255, 255, .0) 1px),
+        radial-gradient(white, rgba(255, 255, 255, .0) 2px),
+        radial-gradient(white, rgba(255, 255, 255, .0) 1px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+.sun {
+    background-color: yellow;
+    border-radius: 50%;
+    height: 20vw;
+    width: 20vw;
+    position: relative;
+    top: 30vh;
+    left: 40vw;
+    color: transparent;
+}
+
+.sun:hover, .sun:active {
+    background-image: linear-gradient(yellow, red 50vh);
+    font-size: 110%;
+    color: black;
+    text-align: center;
+}
+
+.pad-p {
+    padding-top: 25%;
+}
+
+.blue-planet {
+    background-color: rgb(23, 189, 255);
+    border-radius: 50%;
+    height: 10vw;
+    width: 10vw;
+    position: relative;
+    top: -10vh;
+    left: 20vw;
+}
+
+.red-planet {
+    background-color: red;
+    border-radius: 50%;
+    height: 5vw;
+    width: 5vw;
+    position: relative;
+    top: 10vh;
+    left: 80vw;
+}
