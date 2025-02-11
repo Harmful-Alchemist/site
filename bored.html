@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>My test page</title>
+    <script>
+        function next() {
+            const title_el = document.getElementById("title");
+            const page_div = document.getElementById("page");
+            const img_el = document.getElementById("thumbnail");
+
+            fetch("https://en.wikipedia.org/w/api.php?action=query&format=json&generator=random&prop=extracts&grnnamespace=0&origin=*&prop=extracts%7Cpageimages%7Cinfo")
+                .then(
+                    response => response.json().then(
+                        resp => {
+                            const pages = resp.query.pages;
+                            const page_id = Object.keys(pages)[0];
+                            const title = pages[page_id].title;
+                            const content = pages[page_id].extract;
+                            const thumbnail = pages[page_id].thumbnail;
+
+                            title_el.textContent = title;
+                            if (thumbnail) {
+                                img_el.src = thumbnail.source;
+                                img_el.width = thumbnail.width;
+                                img_el.height = thumbnail.height;
+                            } else {
+                                img_el.src = "";
+                                img_el.width = 0;
+                                img_el.height = 0;
+                            }
+                            page_div.innerHTML = content;
+                        }
+                    )
+                )
+        }
+    </script>
+  </head>
+  <body>
+    <button onclick="next()">next</button>
+    <h1 id="title">Title</h1>
+    <img id="thumbnail"/>
+    <div id="page"></div>
+  </body>
+</html>
